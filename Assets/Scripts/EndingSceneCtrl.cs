@@ -74,6 +74,10 @@ public class EndingSceneCtrl : MonoBehaviour
         {
             conversationCtrl.checkPointEvent.AddListener(SetBackgroundTeaParty);
         }
+        if (videoPlayer != null)
+        {
+            videoPlayer.loopPointReached -= VideoPlayer_loopPointReached;
+        }
     }
 
     private void ShowReplayQueryModalDelay()
